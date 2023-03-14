@@ -1,0 +1,10 @@
+#clean puede ser usado como un target, por que no es una palabra reservada
+#clean debe ser usada como target y no como filename
+#generalmente se usa para limpiar la salida de otros targets
+#si un target no existe como filename siempre se ejecutara
+
+some_file: other_file
+	echo "esta regla siempre corre y es la segunda"
+	touch some_file
+other_file:
+	echo "esta regla siempre corre y es la primera"
